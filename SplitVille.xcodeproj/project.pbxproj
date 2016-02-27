@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81EDAAE86AAD743502AAE9C9 /* Pods_SplitVille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */; };
 		BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */; };
 		BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2E11C82060600A1D7FB /* ViewController.swift */; };
 		BDDCE2E51C82060700A1D7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E31C82060700A1D7FB /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.release.xcconfig"; sourceTree = "<group>"; };
+		B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.debug.xcconfig"; sourceTree = "<group>"; };
 		BDDCE2DC1C82060600A1D7FB /* SplitVille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitVille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDCE2E11C82060600A1D7FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BDDCE2E61C82060700A1D7FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDDCE2E91C82060700A1D7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDDCE2EB1C82060700A1D7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SplitVille.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EDAAE86AAD743502AAE9C9 /* Pods_SplitVille.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4034EEAB6DF1E430C95D5B9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */,
+				768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D084DB8556B2AE9913EB2B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BDDCE2D31C82060600A1D7FB = {
 			isa = PBXGroup;
 			children = (
 				BDDCE2DE1C82060600A1D7FB /* SplitVille */,
 				BDDCE2DD1C82060600A1D7FB /* Products */,
+				4034EEAB6DF1E430C95D5B9C /* Pods */,
+				8D084DB8556B2AE9913EB2B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDDCE2EE1C82060700A1D7FB /* Build configuration list for PBXNativeTarget "SplitVille" */;
 			buildPhases = (
+				4706598152DB53A14AAEDE98 /* Check Pods Manifest.lock */,
 				BDDCE2D81C82060600A1D7FB /* Sources */,
 				BDDCE2D91C82060600A1D7FB /* Frameworks */,
 				BDDCE2DA1C82060600A1D7FB /* Resources */,
+				ED71373FFE71A6284464BBA8 /* Embed Pods Frameworks */,
+				8D2A143AC924D3903B1EAB5A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4706598152DB53A14AAEDE98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2A143AC924D3903B1EAB5A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED71373FFE71A6284464BBA8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDDCE2D81C82060600A1D7FB /* Sources */ = {
@@ -246,10 +321,12 @@
 		};
 		BDDCE2EF1C82060700A1D7FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SplitVille/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,10 +335,12 @@
 		};
 		BDDCE2F01C82060700A1D7FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SplitVille/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +366,7 @@
 				BDDCE2F01C82060700A1D7FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_SplitVille {
+  umbrella header "Pods-SplitVille-umbrella.h"
+
+  export *
+  module * { export * }
+}
