@@ -9,20 +9,14 @@
 import UIKit
 
 class RewardsViewController: UIViewController {
-
+    @IBAction func stayCool(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = "Well Done!"
-        
-        let doneButton : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "")
-        doneButton.target = self
-        doneButton.action = "doneAction:"
-        self.navigationItem.rightBarButtonItem = doneButton
-    }
-    
-    @IBAction func doneAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

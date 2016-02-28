@@ -36,10 +36,10 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
         let nav = UINavigationController(rootViewController: popoverContent)
         nav.modalPresentationStyle = UIModalPresentationStyle.Popover
         let popover = nav.popoverPresentationController
-        popoverContent.preferredContentSize = CGSizeMake(500,250)
+        popoverContent.preferredContentSize = CGSizeMake(400,150)
         popover!.delegate = self
         popover!.sourceView = self.view
-        popover!.sourceRect = CGRectMake(100,100,0,0)
+        popover!.sourceRect = CGRectMake(100,100,0,100)
         
         self.presentViewController(nav, animated: true, completion: nil)
     }
