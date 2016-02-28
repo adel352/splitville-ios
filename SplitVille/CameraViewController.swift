@@ -93,7 +93,8 @@ class CameraViewController: UIViewController {
     }
     
     func acceptButtonTapped(sender: AnyObject) {
-        
+        let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AddParticipantViewController")
+        self.presentViewController(nextViewController!, animated: true, completion: nil)
     }
     
     func refreshInterfaceForStillImage(image: UIImage?) {

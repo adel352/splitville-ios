@@ -321,7 +321,7 @@
         <!--Add Participant View Controller-->
         <scene sceneID="KrG-Ec-Zgl">
             <objects>
-                <viewController id="qrn-Vc-Ky1" customClass="AddParticipantViewController" customModule="SplitVille" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddParticipantViewController" id="qrn-Vc-Ky1" customClass="AddParticipantViewController" customModule="SplitVille" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lgn-cN-SXi"/>
                         <viewControllerLayoutGuide type="bottom" id="l52-bd-FOl"/>
@@ -376,7 +376,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="lEZ-Do-9ri" kind="show" id="jIn-9A-H1C"/>
+                                    <action selector="backButtonTapped:" destination="qrn-Vc-Ky1" eventType="touchUpInside" id="dOd-9S-FBk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB5-9r-SuE">
@@ -568,7 +568,4 @@
         <image name="switch_cam" width="100" height="100"/>
         <image name="unchecked" width="500" height="500"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1p7-EP-zq6"/>
-    </inferredMetricsTieBreakers>
 </document>
