@@ -13,13 +13,16 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var stillImageView: UIImageView!
     
     let captureSession = AVCaptureSession()
-    var captureDevice : AVCaptureDevice?
-    var previewLayer : AVCaptureVideoPreviewLayer?
+    var captureDevice: AVCaptureDevice?
+    var stillImageOutput: AVCaptureStillImageOutput?
+    var previewLayer: AVCaptureVideoPreviewLayer?
 
     @IBOutlet weak var cameraToolbarView: UIView!
     @IBOutlet weak var cameraIconView: UIView!
+    @IBOutlet weak var cameraCircleView: CameraIconCircle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +58,43 @@ class CameraViewController: UIViewController {
         // Make camera icon rounded
         self.cameraIconView.layer.cornerRadius = self.cameraIconView.bounds.width / 2
         self.cameraIconView.layer.masksToBounds = true
+        
+        let fingerTap = UITapGestureRecognizer(target: self, action: "cameraButtonTapped:")
+        self.cameraCircleView.addGestureRecognizer(fingerTap)
+    }
+    
+    func cameraButtonTapped(recognizer: UIGestureRecognizer) {
+        var videoConnection: AVCaptureConnection?
+        self.stillImageOutput?.connections.forEach {connection in
+            guard let inputPortsArray = connection.inputPorts as? NSArray else { return }
+            inputPortsArray.forEach {
+                if $0.mediaType == AVMediaTypeVideo {
+                    videoConnection = connection as? AVCaptureConnection
+                    return
+                }
+            }
+            if videoConnection != nil {
+                return
+            }
+        }
+        print("About to request capture from \(self.stillImageOutput)")
+        self.stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection) { (imageSampleBuffer, error) -> Void in
+            let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
+            let image = UIImage(data: imageData)
+            self.cameraView.hidden = true
+            self.stillImageView.hidden = false
+            self.stillImageView.image = image
+        }
     }
     
     func beginSession() {
         do {
             try self.captureSession.addInput(AVCaptureDeviceInput(device: self.captureDevice))
+            
+            self.stillImageOutput = AVCaptureStillImageOutput()
+            self.stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+            self.captureSession.addOutput(self.stillImageOutput)
+            
             self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
         } catch {
             print("Failed to add input device")
