@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eqi-SV-EUY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lEZ-Do-9ri">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -171,9 +172,85 @@
             </objects>
             <point key="canvasLocation" x="245" y="305"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="VId-SP-a7a">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="lEZ-Do-9ri" customClass="CameraViewController" customModule="SplitVille" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lu7-LM-oCC"/>
+                        <viewControllerLayoutGuide type="bottom" id="79J-NV-hWU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yDW-vM-MHw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPr-Yv-qpc" userLabel="CameraToolbarView">
+                                <rect key="frame" x="0.0" y="520" width="600" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pye-lW-WgN">
+                                        <rect key="frame" x="498" y="29.5" width="70" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.55686274509803924" green="0.26666666666666666" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pye-lW-WgN" firstAttribute="centerY" secondItem="VPr-Yv-qpc" secondAttribute="centerY" id="iQe-u4-SbF"/>
+                                    <constraint firstAttribute="trailing" secondItem="pye-lW-WgN" secondAttribute="trailing" constant="32" id="luJ-Mv-lSQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="olL-eP-KsW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-O6-V3V" userLabel="CameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkF-Mc-vEo" userLabel="MenuView">
+                                <rect key="frame" x="20" y="28" width="50" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-zk-RdJ">
+                                        <rect key="frame" x="14.5" y="15.5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Qhq-rw-0n9"/>
+                                            <constraint firstAttribute="width" secondItem="OlA-zk-RdJ" secondAttribute="height" multiplier="1:1" id="Vkg-KC-77h"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5568627451" green="0.2666666667" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OlA-zk-RdJ" firstAttribute="centerX" secondItem="BkF-Mc-vEo" secondAttribute="centerX" id="BRq-lL-kHN"/>
+                                    <constraint firstAttribute="width" secondItem="BkF-Mc-vEo" secondAttribute="height" multiplier="1:1" id="G3d-XJ-AJ2"/>
+                                    <constraint firstAttribute="height" constant="50" id="P3F-ii-PNH"/>
+                                    <constraint firstItem="OlA-zk-RdJ" firstAttribute="centerY" secondItem="BkF-Mc-vEo" secondAttribute="centerY" id="yJp-1Y-Eij"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BB9-O6-V3V" secondAttribute="trailing" constant="-20" id="0wh-01-Udc"/>
+                            <constraint firstItem="BkF-Mc-vEo" firstAttribute="top" secondItem="lu7-LM-oCC" secondAttribute="bottom" constant="8" id="2fC-gM-gu6"/>
+                            <constraint firstItem="VPr-Yv-qpc" firstAttribute="top" secondItem="BB9-O6-V3V" secondAttribute="bottom" id="5OT-Nr-gH4"/>
+                            <constraint firstItem="BkF-Mc-vEo" firstAttribute="leading" secondItem="yDW-vM-MHw" secondAttribute="leadingMargin" id="64z-sd-bbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VPr-Yv-qpc" secondAttribute="trailing" constant="-20" id="6a0-qx-Bgt"/>
+                            <constraint firstItem="BB9-O6-V3V" firstAttribute="leading" secondItem="yDW-vM-MHw" secondAttribute="leadingMargin" constant="-20" id="F81-t7-oXJ"/>
+                            <constraint firstItem="79J-NV-hWU" firstAttribute="top" secondItem="VPr-Yv-qpc" secondAttribute="bottom" id="glB-lg-Vbx"/>
+                            <constraint firstItem="VPr-Yv-qpc" firstAttribute="leading" secondItem="yDW-vM-MHw" secondAttribute="leadingMargin" constant="-20" id="z4E-mz-6uM"/>
+                            <constraint firstItem="BB9-O6-V3V" firstAttribute="top" secondItem="lu7-LM-oCC" secondAttribute="bottom" constant="-20" id="zKS-Em-axf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="BB9-O6-V3V" id="NgP-Bt-rYH"/>
+                        <outlet property="menuView" destination="BkF-Mc-vEo" id="hPB-eb-Gjh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88y-Gc-2jE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="291"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="742" height="1000"/>
         <image name="splitville" width="742" height="197"/>
+        <image name="Menu" width="100" height="100"/>
     </resources>
 </document>

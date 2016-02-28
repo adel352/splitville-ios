@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81EDAAE86AAD743502AAE9C9 /* Pods_SplitVille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */; };
+		BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86B3331C824E49003275F5 /* CameraViewController.swift */; };
 		BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */; };
 		BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2E11C82060600A1D7FB /* ViewController.swift */; };
 		BDDCE2E51C82060700A1D7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E31C82060700A1D7FB /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.release.xcconfig"; sourceTree = "<group>"; };
 		B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.debug.xcconfig"; sourceTree = "<group>"; };
+		BD86B3331C824E49003275F5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BDDCE2DC1C82060600A1D7FB /* SplitVille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitVille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDCE2E11C82060600A1D7FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */,
 				BDDCE2E11C82060600A1D7FB /* ViewController.swift */,
 				BDDCE2E31C82060700A1D7FB /* Main.storyboard */,
+				BD86B3331C824E49003275F5 /* CameraViewController.swift */,
 				BDDCE2E61C82060700A1D7FB /* Assets.xcassets */,
 				BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */,
 				BDDCE2EB1C82060700A1D7FB /* Info.plist */,
@@ -213,6 +216,7 @@
 			files = (
 				BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */,
 				BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */,
+				BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
