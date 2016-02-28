@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Menu Filled-100.png",
+      "filename" : "Switch On Filled-100.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Menu Filled-100@2x.png",
+      "filename" : "Switch On Filled-100@2x.png",
       "scale" : "2x"
     },
     {

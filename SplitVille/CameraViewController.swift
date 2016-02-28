@@ -18,6 +18,9 @@ class CameraViewController: UIViewController {
     var captureDevice : AVCaptureDevice?
     var previewLayer : AVCaptureVideoPreviewLayer?
 
+    @IBOutlet weak var cameraToolbarView: UIView!
+    @IBOutlet weak var cameraIconView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +41,7 @@ class CameraViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
+    override func viewWillLayoutSubviews() {
         guard let previewLayer = self.previewLayer else { return }
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         previewLayer.bounds = self.cameraView.bounds
@@ -49,6 +52,9 @@ class CameraViewController: UIViewController {
         // Make menu button rounded
         self.menuView.layer.cornerRadius = self.menuView.bounds.width / 2
         self.menuView.layer.masksToBounds = true
+        // Make camera icon rounded
+        self.cameraIconView.layer.cornerRadius = self.cameraIconView.bounds.width / 2
+        self.cameraIconView.layer.masksToBounds = true
     }
     
     func beginSession() {

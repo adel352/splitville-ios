@@ -190,18 +190,75 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPr-Yv-qpc" userLabel="CameraToolbarView">
                                 <rect key="frame" x="0.0" y="520" width="600" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pye-lW-WgN">
-                                        <rect key="frame" x="498" y="29.5" width="70" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLASH ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pye-lW-WgN">
+                                        <rect key="frame" x="511" y="31" width="73" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash" translatesAutoresizingMaskIntoConstraints="NO" id="cbW-8q-0Hz">
+                                        <rect key="frame" x="473" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cbW-8q-0Hz" secondAttribute="height" multiplier="1:1" id="Aqg-MT-kwC"/>
+                                            <constraint firstAttribute="height" constant="30" id="IN4-it-Cks"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switch_cam" translatesAutoresizingMaskIntoConstraints="NO" id="8ii-J5-E9s">
+                                        <rect key="frame" x="16" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GOM-Nh-df6"/>
+                                            <constraint firstAttribute="width" secondItem="8ii-J5-E9s" secondAttribute="height" multiplier="1:1" id="mwt-ZV-DqY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWITCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLq-f9-w8u">
+                                        <rect key="frame" x="54" y="31" width="57.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEA-2N-ZEg" userLabel="Camera Icon">
+                                        <rect key="frame" x="275" y="15" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-Zg-uFA">
+                                                <rect key="frame" x="12.5" y="12.5" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gaG-Zg-uFA" secondAttribute="height" multiplier="1:1" id="E9J-cc-Br9"/>
+                                                    <constraint firstAttribute="height" constant="25" id="IRg-gh-zGI"/>
+                                                </constraints>
+                                                <state key="normal" image="camera"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="08B-pM-Ta1"/>
+                                            <constraint firstAttribute="width" secondItem="IEA-2N-ZEg" secondAttribute="height" multiplier="1:1" id="JcJ-If-kDD"/>
+                                            <constraint firstItem="gaG-Zg-uFA" firstAttribute="centerX" secondItem="IEA-2N-ZEg" secondAttribute="centerX" id="glD-ES-GCJ"/>
+                                            <constraint firstItem="gaG-Zg-uFA" firstAttribute="centerY" secondItem="IEA-2N-ZEg" secondAttribute="centerY" id="lIh-uJ-583"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMj-wf-EAD" customClass="CameraIconCircle" customModule="SplitVille" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="10" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Giu-xh-0aL"/>
+                                            <constraint firstAttribute="width" secondItem="YMj-wf-EAD" secondAttribute="height" multiplier="1:1" id="oHa-xq-uMC"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.55686274509803924" green="0.26666666666666666" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="pye-lW-WgN" firstAttribute="leading" secondItem="cbW-8q-0Hz" secondAttribute="trailing" constant="8" id="2lB-y4-yaE"/>
+                                    <constraint firstItem="JLq-f9-w8u" firstAttribute="leading" secondItem="8ii-J5-E9s" secondAttribute="trailing" constant="8" id="Lpa-rj-1dS"/>
+                                    <constraint firstItem="8ii-J5-E9s" firstAttribute="leading" secondItem="VPr-Yv-qpc" secondAttribute="leading" constant="16" id="PhL-mr-Dlb"/>
+                                    <constraint firstItem="JLq-f9-w8u" firstAttribute="centerY" secondItem="8ii-J5-E9s" secondAttribute="centerY" id="Q7j-PN-7Q5"/>
+                                    <constraint firstItem="cbW-8q-0Hz" firstAttribute="centerY" secondItem="pye-lW-WgN" secondAttribute="centerY" id="buV-fN-wW8"/>
                                     <constraint firstItem="pye-lW-WgN" firstAttribute="centerY" secondItem="VPr-Yv-qpc" secondAttribute="centerY" id="iQe-u4-SbF"/>
-                                    <constraint firstAttribute="trailing" secondItem="pye-lW-WgN" secondAttribute="trailing" constant="32" id="luJ-Mv-lSQ"/>
+                                    <constraint firstItem="IEA-2N-ZEg" firstAttribute="centerY" secondItem="VPr-Yv-qpc" secondAttribute="centerY" id="lXO-fn-QKv"/>
+                                    <constraint firstAttribute="trailing" secondItem="pye-lW-WgN" secondAttribute="trailing" constant="16" id="luJ-Mv-lSQ"/>
+                                    <constraint firstItem="YMj-wf-EAD" firstAttribute="centerX" secondItem="VPr-Yv-qpc" secondAttribute="centerX" id="npY-LH-3Jt"/>
                                     <constraint firstAttribute="height" constant="80" id="olL-eP-KsW"/>
+                                    <constraint firstItem="IEA-2N-ZEg" firstAttribute="centerX" secondItem="VPr-Yv-qpc" secondAttribute="centerX" id="ti0-dx-VNy"/>
+                                    <constraint firstItem="YMj-wf-EAD" firstAttribute="centerY" secondItem="VPr-Yv-qpc" secondAttribute="centerY" id="uex-4N-eMq"/>
+                                    <constraint firstItem="8ii-J5-E9s" firstAttribute="centerY" secondItem="VPr-Yv-qpc" secondAttribute="centerY" id="y2g-Gf-02b"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-O6-V3V" userLabel="CameraView">
@@ -211,8 +268,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkF-Mc-vEo" userLabel="MenuView">
                                 <rect key="frame" x="20" y="28" width="50" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-zk-RdJ">
-                                        <rect key="frame" x="14.5" y="15.5" width="20" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="OlA-zk-RdJ">
+                                        <rect key="frame" x="15" y="15" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Qhq-rw-0n9"/>
                                             <constraint firstAttribute="width" secondItem="OlA-zk-RdJ" secondAttribute="height" multiplier="1:1" id="Vkg-KC-77h"/>
@@ -242,6 +299,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraIconView" destination="IEA-2N-ZEg" id="wDS-oM-51M"/>
+                        <outlet property="cameraToolbarView" destination="VPr-Yv-qpc" id="Hop-7U-LP4"/>
                         <outlet property="cameraView" destination="BB9-O6-V3V" id="NgP-Bt-rYH"/>
                         <outlet property="menuView" destination="BkF-Mc-vEo" id="hPB-eb-Gjh"/>
                     </connections>
@@ -252,8 +311,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Menu" width="100" height="100"/>
+        <image name="camera" width="100" height="100"/>
+        <image name="flash" width="100" height="100"/>
         <image name="logo" width="742" height="1000"/>
+        <image name="menu" width="100" height="100"/>
         <image name="splitville" width="742" height="197"/>
+        <image name="switch_cam" width="100" height="100"/>
     </resources>
 </document>
