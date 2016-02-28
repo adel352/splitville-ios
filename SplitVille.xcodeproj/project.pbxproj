@@ -14,6 +14,9 @@
 		BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86B3331C824E49003275F5 /* CameraViewController.swift */; };
 		BDC88E391C829EAC000274A5 /* CameraIconCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */; };
 		BDC88E3B1C836E3A000274A5 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E3A1C836E3A000274A5 /* BillViewController.swift */; };
+		BDC88E3D1C837ACD000274A5 /* BillItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E3C1C837ACD000274A5 /* BillItemCell.swift */; };
+		BDC88E3F1C837E4E000274A5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E3E1C837E4E000274A5 /* CollectionViewController.swift */; };
+		BDC88E411C837E9C000274A5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E401C837E9C000274A5 /* CollectionViewCell.swift */; };
 		BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */; };
 		BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2E11C82060600A1D7FB /* ViewController.swift */; };
 		BDDCE2E51C82060700A1D7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E31C82060700A1D7FB /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		BD86B3331C824E49003275F5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraIconCircle.swift; sourceTree = "<group>"; };
 		BDC88E3A1C836E3A000274A5 /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		BDC88E3C1C837ACD000274A5 /* BillItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillItemCell.swift; sourceTree = "<group>"; };
+		BDC88E3E1C837E4E000274A5 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		BDC88E401C837E9C000274A5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BDDCE2DC1C82060600A1D7FB /* SplitVille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitVille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDCE2E11C82060600A1D7FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,9 +98,13 @@
 			children = (
 				BDC88E3A1C836E3A000274A5 /* BillViewController.swift */,
 				BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */,
+				BDC88E3A1C836E3A000274A5 /* BillViewController.swift */,
 				BDDCE2E11C82060600A1D7FB /* ViewController.swift */,
 				BDDCE2E31C82060700A1D7FB /* Main.storyboard */,
+				BDC88E3E1C837E4E000274A5 /* CollectionViewController.swift */,
+				BDC88E401C837E9C000274A5 /* CollectionViewCell.swift */,
 				1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */,
+				BDC88E3C1C837ACD000274A5 /* BillItemCell.swift */,
 				1EE14BB71C82B68700E2168C /* ParticipantCell.swift */,
 				BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */,
 				BD86B3331C824E49003275F5 /* CameraViewController.swift */,
@@ -141,7 +151,7 @@
 				TargetAttributes = {
 					BDDCE2DB1C82060600A1D7FB = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 7PKG45HR7B;
+						DevelopmentTeam = WB8CM5L7ZT;
 					};
 				};
 			};
@@ -229,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC88E411C837E9C000274A5 /* CollectionViewCell.swift in Sources */,
+				BDC88E3F1C837E4E000274A5 /* CollectionViewController.swift in Sources */,
 				BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */,
 				BDC88E3B1C836E3A000274A5 /* BillViewController.swift in Sources */,
 				1EE14BB61C82B3B900E2168C /* AddParticipantViewController.swift in Sources */,
@@ -237,6 +249,7 @@
 				1E342FEA1C83746D0098B63C /* RewardsViewController.swift in Sources */,
 				BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */,
 				BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */,
+				BDC88E3D1C837ACD000274A5 /* BillItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +366,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adel.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -369,7 +382,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adel.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

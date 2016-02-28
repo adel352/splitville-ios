@@ -109,29 +109,53 @@ class CameraViewController: UIViewController {
             width: self.cameraToolbarView.bounds.width / 2, height: self.cameraToolbarView.bounds.height))
         self.declineButton?.addTarget(self, action: "declineButtonTapped:", forControlEvents: .TouchUpInside)
         guard let declineButton = self.declineButton else { return }
-        declineButton.backgroundColor = UIColor.redColor()
+        declineButton.backgroundColor = colorWithHexString("#c0392b")
         self.cameraToolbarView.addSubview(declineButton)
        
         self.acceptButton = UIButton(frame: CGRect(x: self.cameraToolbarView.bounds.width / 2, y: 0,
             width: self.cameraToolbarView.bounds.width / 2, height: self.cameraToolbarView.bounds.height))
         self.acceptButton?.addTarget(self, action: "acceptButtonTapped:", forControlEvents: .TouchUpInside)
         guard let acceptButton = self.acceptButton else { return }
-        acceptButton.backgroundColor = UIColor.greenColor()
+        acceptButton.backgroundColor = colorWithHexString("#37d077")
         self.cameraToolbarView.addSubview(acceptButton)
         
         // Add images to buttons
         let declineImage = UIImageView(image: UIImage(named: "cancel"))
         declineButton.addSubview(declineImage)
         declineImage.frame = CGRect(x: declineImage.bounds.origin.x, y: declineImage.bounds.origin.y,
-            width: declineButton.bounds.width / 3, height: 2/3 * declineButton.bounds.height)
+            width: declineButton.bounds.width * 0.2, height: 0.4 * declineButton.bounds.height)
         declineImage.center = self.declineButton!.center
 
         
         let acceptImage = UIImageView(image: UIImage(named: "accept"))
         acceptButton.addSubview(acceptImage)
-        acceptImage.frame = CGRect(x: acceptButton.bounds.width / 2 - acceptImage.bounds.width / 3,
-            y: acceptButton.bounds.height / 8,
-            width: acceptButton.bounds.width / 2, height: 3/4 * acceptButton.bounds.height)
+        acceptImage.frame = CGRect(x: acceptButton.bounds.width * 0.5 - acceptImage.bounds.width * 0.2,
+            y: acceptButton.bounds.height * 0.2,
+            width: acceptButton.bounds.width * 0.3, height: 0.6 * acceptButton.bounds.height)
+    }
+    
+    func colorWithHexString (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substringFromIndex(1)
+        }
+        
+        if (cString.characters.count != 6) {
+            return UIColor.grayColor()
+        }
+        
+        let rString = (cString as NSString).substringToIndex(2)
+        let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+        let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+        
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        NSScanner(string: rString).scanHexInt(&r)
+        NSScanner(string: gString).scanHexInt(&g)
+        NSScanner(string: bString).scanHexInt(&b)
+        
+        
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
     
     func refreshInterfaceForCamera() {
