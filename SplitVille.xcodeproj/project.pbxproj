@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					BDDCE2DB1C82060600A1D7FB = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W7PZDQD3EB;
+						DevelopmentTeam = WB8CM5L7ZT;
 					};
 				};
 			};
@@ -345,7 +345,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -361,7 +361,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
