@@ -19,6 +19,9 @@ class CameraViewController: UIViewController {
     var captureDevice: AVCaptureDevice?
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
+    
+    var declineButton: UIButton?
+    var acceptButton: UIButton?
 
     @IBOutlet weak var cameraToolbarView: UIView!
     @IBOutlet weak var cameraIconView: UIView!
@@ -81,10 +84,64 @@ class CameraViewController: UIViewController {
         self.stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection) { (imageSampleBuffer, error) -> Void in
             let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer)
             let image = UIImage(data: imageData)
-            self.cameraView.hidden = true
-            self.stillImageView.hidden = false
-            self.stillImageView.image = image
+            self.refreshInterfaceForStillImage(image)
         }
+    }
+    
+    func declineButtonTapped(sender: AnyObject) {
+        refreshInterfaceForCamera()
+    }
+    
+    func acceptButtonTapped(sender: AnyObject) {
+        
+    }
+    
+    func refreshInterfaceForStillImage(image: UIImage?) {
+        self.cameraView.hidden = true
+        self.menuView.hidden = true
+        
+        self.stillImageView.hidden = false
+        self.stillImageView.image = image
+        
+        // Add bottom buttons
+        self.declineButton = UIButton(frame: CGRect(x: 0, y: 0,
+            width: self.cameraToolbarView.bounds.width / 2, height: self.cameraToolbarView.bounds.height))
+        self.declineButton?.addTarget(self, action: "declineButtonTapped:", forControlEvents: .TouchUpInside)
+        guard let declineButton = self.declineButton else { return }
+        declineButton.backgroundColor = UIColor.redColor()
+        self.cameraToolbarView.addSubview(declineButton)
+       
+        self.acceptButton = UIButton(frame: CGRect(x: self.cameraToolbarView.bounds.width / 2, y: 0,
+            width: self.cameraToolbarView.bounds.width / 2, height: self.cameraToolbarView.bounds.height))
+        self.acceptButton?.addTarget(self, action: "acceptButtonTapped:", forControlEvents: .TouchUpInside)
+        guard let acceptButton = self.acceptButton else { return }
+        acceptButton.backgroundColor = UIColor.greenColor()
+        self.cameraToolbarView.addSubview(acceptButton)
+        
+        // Add images to buttons
+        let declineImage = UIImageView(image: UIImage(named: "cancel"))
+        declineButton.addSubview(declineImage)
+        declineImage.frame = CGRect(x: declineImage.bounds.origin.x, y: declineImage.bounds.origin.y,
+            width: declineButton.bounds.width / 3, height: 2/3 * declineButton.bounds.height)
+        declineImage.center = self.declineButton!.center
+
+        
+        let acceptImage = UIImageView(image: UIImage(named: "accept"))
+        acceptButton.addSubview(acceptImage)
+        acceptImage.frame = CGRect(x: acceptButton.bounds.width / 2 - acceptImage.bounds.width / 3,
+            y: acceptButton.bounds.height / 8,
+            width: acceptButton.bounds.width / 2, height: 3/4 * acceptButton.bounds.height)
+    }
+    
+    func refreshInterfaceForCamera() {
+        self.cameraView.hidden = false
+        self.menuView.hidden = false
+        
+        self.stillImageView.hidden = true
+        
+        // Remove bottom buttons
+        self.declineButton?.removeFromSuperview()
+        self.acceptButton?.removeFromSuperview()
     }
     
     func beginSession() {
