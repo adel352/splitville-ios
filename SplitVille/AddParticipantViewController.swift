@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddParticipantViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddParticipantViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var participantsTableView: UITableView!
     
@@ -29,6 +29,19 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBAction func backButtonTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func launchRewardPopupAction(sender: AnyObject) {
+        let popoverContent = (self.storyboard?.instantiateViewControllerWithIdentifier("RewardsViewController"))! as UIViewController
+        let nav = UINavigationController(rootViewController: popoverContent)
+        nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+        let popover = nav.popoverPresentationController
+        popoverContent.preferredContentSize = CGSizeMake(600,600)
+        popover!.delegate = self
+        popover!.sourceView = self.view
+        popover!.sourceRect = CGRectMake(100,100,0,0)
+        
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -64,6 +77,19 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "popoverSegue" {
+//            let popoverViewController = segue.destinationViewController
+//            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+//            popoverViewController.popoverPresentationController!.delegate = self
+//        }
+//    }
+
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
     }
 
 }

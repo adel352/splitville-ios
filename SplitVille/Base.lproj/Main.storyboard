@@ -456,6 +456,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="launchRewardPopupAction:" destination="qrn-Vc-Ky1" eventType="touchUpInside" id="nm4-Gt-KQC"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K7x-hv-mER">
                                 <rect key="frame" x="0.0" y="86" width="600" height="454"/>
@@ -623,6 +626,28 @@
             </objects>
             <point key="canvasLocation" x="1712" y="305"/>
         </scene>
+        <!--Rewards View Controller-->
+        <scene sceneID="hW5-R0-o2b">
+            <objects>
+                <viewController storyboardIdentifier="RewardsViewController" id="HY8-pe-LAL" customClass="RewardsViewController" customModule="SplitVille" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lbb-Ey-YvB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieb-FK-j6b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qnb-6y-dag">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="500"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxv-Um-Vy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="1104"/>
+        </scene>
         <!--Bill View Controller-->
         <scene sceneID="DeW-CU-mHZ">
             <objects>
@@ -646,8 +671,8 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="n0m-qB-Mvt"/>
                                         <exclude reference="L0T-Oo-HBn"/>
+                                        <exclude reference="n0m-qB-Mvt"/>
                                     </mask>
                                 </variation>
                             </label>

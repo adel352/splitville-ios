@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E342FEA1C83746D0098B63C /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E342FE91C83746D0098B63C /* RewardsViewController.swift */; };
 		1EE14BB61C82B3B900E2168C /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */; };
 		1EE14BB81C82B68700E2168C /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE14BB71C82B68700E2168C /* ParticipantCell.swift */; };
 		81EDAAE86AAD743502AAE9C9 /* Pods_SplitVille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */; };
@@ -21,13 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E342FE91C83746D0098B63C /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
 		1EE14BB71C82B68700E2168C /* ParticipantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
 		768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.release.xcconfig"; sourceTree = "<group>"; };
 		B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.debug.xcconfig"; sourceTree = "<group>"; };
 		BD86B3331C824E49003275F5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraIconCircle.swift; sourceTree = "<group>"; };
-		BDC88E3A1C836E3A000274A5 /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillViewController.swift; path = SplitVille/BillViewController.swift; sourceTree = "<group>"; };
+		BDC88E3A1C836E3A000274A5 /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		BDDCE2DC1C82060600A1D7FB /* SplitVille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitVille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDDCE2E11C82060600A1D7FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		BDDCE2D31C82060600A1D7FB = {
 			isa = PBXGroup;
 			children = (
-				BDC88E3A1C836E3A000274A5 /* BillViewController.swift */,
 				BDDCE2DE1C82060600A1D7FB /* SplitVille */,
 				BDDCE2DD1C82060600A1D7FB /* Products */,
 				4034EEAB6DF1E430C95D5B9C /* Pods */,
@@ -89,6 +90,7 @@
 		BDDCE2DE1C82060600A1D7FB /* SplitVille */ = {
 			isa = PBXGroup;
 			children = (
+				BDC88E3A1C836E3A000274A5 /* BillViewController.swift */,
 				BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */,
 				BDDCE2E11C82060600A1D7FB /* ViewController.swift */,
 				BDDCE2E31C82060700A1D7FB /* Main.storyboard */,
@@ -99,6 +101,7 @@
 				BDDCE2E61C82060700A1D7FB /* Assets.xcassets */,
 				BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */,
 				BDDCE2EB1C82060700A1D7FB /* Info.plist */,
+				1E342FE91C83746D0098B63C /* RewardsViewController.swift */,
 			);
 			path = SplitVille;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				1EE14BB61C82B3B900E2168C /* AddParticipantViewController.swift in Sources */,
 				BDC88E391C829EAC000274A5 /* CameraIconCircle.swift in Sources */,
 				1EE14BB81C82B68700E2168C /* ParticipantCell.swift in Sources */,
+				1E342FEA1C83746D0098B63C /* RewardsViewController.swift in Sources */,
 				BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */,
 				BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */,
 			);
