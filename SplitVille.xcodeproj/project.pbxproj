@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE14BB61C82B3B900E2168C /* AddParticipantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */; };
+		1EE14BB81C82B68700E2168C /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE14BB71C82B68700E2168C /* ParticipantCell.swift */; };
 		81EDAAE86AAD743502AAE9C9 /* Pods_SplitVille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB884730841B788F5ED45B3B /* Pods_SplitVille.framework */; };
 		BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86B3331C824E49003275F5 /* CameraViewController.swift */; };
 		BDC88E391C829EAC000274A5 /* CameraIconCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */; };
 		BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */; };
 		BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2E11C82060600A1D7FB /* ViewController.swift */; };
 		BDDCE2E51C82060700A1D7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E31C82060700A1D7FB /* Main.storyboard */; };
-		BDDCE2E71C82060700A1D7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E61C82060700A1D7FB /* Assets.xcassets */; };
-		BDDCE2EA1C82060700A1D7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */; };
+               BDDCE2E71C82060700A1D7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E61C82060700A1D7FB /* Assets.xcassets */; };
+               BDDCE2EA1C82060700A1D7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddParticipantViewController.swift; sourceTree = "<group>"; };
+		1EE14BB71C82B68700E2168C /* ParticipantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
 		768EA69058B013893DA3CB80 /* Pods-SplitVille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.release.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.release.xcconfig"; sourceTree = "<group>"; };
 		B50B9BFDD985663151513E82 /* Pods-SplitVille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SplitVille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SplitVille/Pods-SplitVille.debug.xcconfig"; sourceTree = "<group>"; };
 		BD86B3331C824E49003275F5 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */,
 				BDDCE2E11C82060600A1D7FB /* ViewController.swift */,
 				BDDCE2E31C82060700A1D7FB /* Main.storyboard */,
+				1EE14BB51C82B3B900E2168C /* AddParticipantViewController.swift */,
+				1EE14BB71C82B68700E2168C /* ParticipantCell.swift */,
 				BDC88E381C829EAC000274A5 /* CameraIconCircle.swift */,
 				BD86B3331C824E49003275F5 /* CameraViewController.swift */,
 				BDDCE2E61C82060700A1D7FB /* Assets.xcassets */,
@@ -129,7 +135,7 @@
 				TargetAttributes = {
 					BDDCE2DB1C82060600A1D7FB = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = WB8CM5L7ZT;
+						DevelopmentTeam = W7PZDQD3EB;
 					};
 				};
 			};
@@ -218,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */,
+				1EE14BB61C82B3B900E2168C /* AddParticipantViewController.swift in Sources */,
 				BDC88E391C829EAC000274A5 /* CameraIconCircle.swift in Sources */,
+				1EE14BB81C82B68700E2168C /* ParticipantCell.swift in Sources */,
 				BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */,
 				BD86B3341C824E49003275F5 /* CameraViewController.swift in Sources */,
 			);
@@ -333,11 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -347,11 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
