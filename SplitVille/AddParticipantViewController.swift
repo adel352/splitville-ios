@@ -12,9 +12,9 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
 
     @IBOutlet weak var participantsTableView: UITableView!
     
-    let participantsPictures = ["lea", "nabil", "franck", "marcus", "adel"]
+    let participantsPictures = ["lea", "phil", "franck", "marcus", "adel"]
     
-    let participantsNames = ["Lea Abboud", "Nabil Maadarani", "Franck Mamboue", "Chui Marcus", "Adel Araji"]
+    let participantsNames = ["Lea Abboud", "Philippe Legault", "Franck Mamboue", "Chui Marcus", "Adel Araji"]
     
     let participantsDistance = ["20m away", "25m away", "30m away", "30m away", "300m away"]
     
