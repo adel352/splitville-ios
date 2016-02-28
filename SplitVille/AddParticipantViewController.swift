@@ -27,6 +27,10 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+    @IBAction func backButtonTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

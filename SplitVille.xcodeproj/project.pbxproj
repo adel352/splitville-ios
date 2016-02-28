@@ -15,8 +15,8 @@
 		BDDCE2E01C82060600A1D7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2DF1C82060600A1D7FB /* AppDelegate.swift */; };
 		BDDCE2E21C82060600A1D7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCE2E11C82060600A1D7FB /* ViewController.swift */; };
 		BDDCE2E51C82060700A1D7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E31C82060700A1D7FB /* Main.storyboard */; };
-               BDDCE2E71C82060700A1D7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E61C82060700A1D7FB /* Assets.xcassets */; };
-               BDDCE2EA1C82060700A1D7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */; };
+		BDDCE2E71C82060700A1D7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E61C82060700A1D7FB /* Assets.xcassets */; };
+		BDDCE2EA1C82060700A1D7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDCE2E81C82060700A1D7FB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					BDDCE2DB1C82060600A1D7FB = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W7PZDQD3EB;
+						DevelopmentTeam = WB8CM5L7ZT;
 					};
 				};
 			};
@@ -345,7 +345,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -361,7 +361,7 @@
 				INFOPLIST_FILE = SplitVille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.franck.SplitVille;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabil.SplitVille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
