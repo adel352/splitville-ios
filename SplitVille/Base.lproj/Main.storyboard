@@ -507,9 +507,9 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="82s-pK-yfv">
-                                                    <rect key="frame" x="556" y="40" width="20" height="20"/>
+                                                    <rect key="frame" x="546" y="35" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="OZm-VX-cCd"/>
+                                                        <constraint firstAttribute="height" constant="30" id="OZm-VX-cCd"/>
                                                         <constraint firstAttribute="width" secondItem="82s-pK-yfv" secondAttribute="height" multiplier="1:1" id="jsX-gH-psr"/>
                                                     </constraints>
                                                 </imageView>
