@@ -18,6 +18,8 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
     
     let participantsDistance = ["20m away", "25m away", "30m away", "30m away", "300m away"]
     
+    var participantsChecked = ["unchecked", "unchecked", "unchecked", "unchecked", "unchecked"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +35,17 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
         return self.participantsPictures.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as? ParticipantCell
+        if (self.participantsChecked[indexPath.row] == "unchecked") {
+            cell?.checkbox.image = UIImage(named: "checked")
+            self.participantsChecked[indexPath.row] = "checked"
+        } else {
+            cell?.checkbox.image = UIImage(named: "unchecked")
+            self.participantsChecked[indexPath.row] = "unchecked"
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("participantCell", forIndexPath: indexPath) as! ParticipantCell
         cell.participantImageView.image = UIImage(named: self.participantsPictures[indexPath.row])
@@ -43,6 +56,8 @@ class AddParticipantViewController: UIViewController, UITableViewDataSource, UIT
         cell.participantName.text = self.participantsNames[indexPath.row]
         
         cell.participantDistance.text = self.participantsDistance[indexPath.row]
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell
     }

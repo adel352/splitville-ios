@@ -15,7 +15,9 @@ class ParticipantCell: UITableViewCell {
     @IBOutlet weak var participantName: UILabel!
     
     @IBOutlet weak var participantDistance: UILabel!
-
+    
+    @IBOutlet weak var checkbox: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

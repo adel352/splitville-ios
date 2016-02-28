@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lEZ-Do-9ri">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qrn-Vc-Ky1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -439,13 +439,22 @@
                                                         <constraint firstItem="CS6-9x-qhF" firstAttribute="leading" secondItem="Hwr-Ri-12h" secondAttribute="leading" id="g2K-wK-T6i"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="82s-pK-yfv">
+                                                    <rect key="frame" x="556" y="40" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="OZm-VX-cCd"/>
+                                                        <constraint firstAttribute="width" secondItem="82s-pK-yfv" secondAttribute="height" multiplier="1:1" id="jsX-gH-psr"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Hwr-Ri-12h" firstAttribute="leading" secondItem="TG6-6V-k3p" secondAttribute="trailing" constant="16" id="39u-hf-Mfe"/>
                                                 <constraint firstItem="TG6-6V-k3p" firstAttribute="centerY" secondItem="IZr-UL-VGD" secondAttribute="centerY" id="4Bv-4H-0YE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="82s-pK-yfv" secondAttribute="trailing" constant="16" id="78A-JI-Ngf"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TG6-6V-k3p" secondAttribute="trailing" constant="-8" id="IMs-B4-FTc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="TG6-6V-k3p" secondAttribute="bottom" constant="8" id="NJ9-Mc-wek"/>
                                                 <constraint firstItem="TG6-6V-k3p" firstAttribute="top" secondItem="IZr-UL-VGD" secondAttribute="topMargin" constant="8" id="W8V-0a-lmq"/>
+                                                <constraint firstItem="82s-pK-yfv" firstAttribute="centerY" secondItem="IZr-UL-VGD" secondAttribute="centerY" id="bZZ-S0-4TV"/>
                                                 <constraint firstItem="TG6-6V-k3p" firstAttribute="leading" secondItem="IZr-UL-VGD" secondAttribute="leadingMargin" constant="8" id="gzT-2d-R2b"/>
                                                 <constraint firstItem="Hwr-Ri-12h" firstAttribute="top" secondItem="TG6-6V-k3p" secondAttribute="bottom" constant="-68" id="gzw-lo-KZu"/>
                                                 <constraint firstItem="Hwr-Ri-12h" firstAttribute="centerY" secondItem="IZr-UL-VGD" secondAttribute="centerY" id="pCP-sP-GgE"/>
@@ -461,6 +470,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkbox" destination="82s-pK-yfv" id="ib0-fc-nqw"/>
                                             <outlet property="participantDistance" destination="TjR-8t-6N2" id="A95-nc-2y8"/>
                                             <outlet property="participantImageView" destination="TG6-6V-k3p" id="T87-eX-JBa"/>
                                             <outlet property="participantName" destination="CS6-9x-qhF" id="1to-8x-FwA"/>
@@ -539,6 +549,7 @@
         <image name="nabil" width="944" height="959"/>
         <image name="splitville" width="742" height="197"/>
         <image name="switch_cam" width="100" height="100"/>
+        <image name="unchecked" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jIn-9A-H1C"/>
